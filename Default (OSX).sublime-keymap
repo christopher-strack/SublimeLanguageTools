@@ -1,0 +1,7 @@
+[
+    // French quotes
+    { "keys": ["alt+f9"], "command": "replace_quotes", "args": { "quote_begin": "»", "quote_end": "«" } },
+
+    // German quotes
+    { "keys": ["alt+f10"], "command": "replace_quotes", "args": { "quote_begin": "„", "quote_end": "“" } }
+]
