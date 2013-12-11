@@ -5,10 +5,12 @@ from sublime_plugin import TextCommand
 from sublime import Region
 
 
-_pattern = re.compile(r'"(.+?)"', re.DOTALL)
+_pattern_double = re.compile(r'"(.+?)"', re.DOTALL)
+_pattern_single = re.compile(r'\'(.+?)\'', re.DOTALL)
 
 def replace_quotes(text, quote_begin, quote_end):
-    return _pattern.sub(r'%s\1%s' % (quote_begin, quote_end), text)
+    s = _pattern_double.sub(r'%s\1%s' % (quote_begin, quote_end), text)
+    return _pattern_single.sub(r'‘\1’', s)
 
 
 class ReplaceQuotesCommand(TextCommand):
