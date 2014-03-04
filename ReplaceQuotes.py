@@ -43,3 +43,13 @@ class ReplaceQuotesCommand(ReplaceCommand):
         s = self._pattern_double.sub(
             r'%s\1%s' % (self._quote_begin, self._quote_end), text)
         return self._pattern_single.sub(r'‘\1’', s)
+
+
+class ReplaceFrenchPunctuationSpacingCommand(ReplaceCommand):
+
+    _before_pattern = re.compile(r' ([:;?!«])')
+    _after_pattern = re.compile(r'(») ')
+
+    def replace(self, text):
+        s = self._before_pattern.sub(r'&nbsp;\1', text)
+        return self._after_pattern.sub(r'\1&nbsp;', s)

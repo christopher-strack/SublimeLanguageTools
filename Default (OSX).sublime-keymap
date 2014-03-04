@@ -4,4 +4,6 @@
 
     // German quotes
     { "keys": ["alt+f10"], "command": "replace_quotes", "args": { "quote_begin": "„", "quote_end": "“" } }
+
+    { "keys": ["alt+f11"], "command": "replace_french_punctuation_spacing" }
 ]
