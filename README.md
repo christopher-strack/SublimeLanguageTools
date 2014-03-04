@@ -1,13 +1,12 @@
-Replace Quotes
+Language Tools
 ====================
 
-Sublime Text Plugin to replace double quotes by language specific quotes.
-Replaces only the selected text, if there is one. It can handle multi line
-text inside the quotes.
+Sublime Text Plugin to replaces language specific patterns.
 
 Default Key Bindings
 --------------------
 ```
 Alt+F9 - Replace quotes by French quotation marks
 Alt+F10 - Replace quotes by German quotation marks
+Alt+F11 - Replace spaces in French punctuation by non-breaking ones
 ```
