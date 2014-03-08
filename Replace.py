@@ -47,8 +47,8 @@ class ReplaceQuotesCommand(ReplaceCommand):
 
 class ReplaceFrenchPunctuationSpacingCommand(ReplaceCommand):
 
-    _before_pattern = re.compile(r' ([:;?!»])')
-    _after_pattern = re.compile(r'(«) ')
+    _before_pattern = re.compile(r' ([:;?!»”])')
+    _after_pattern = re.compile(r'([«“]) ')
 
     def replace(self, text):
         s = self._before_pattern.sub(r'&nbsp;\1', text)
